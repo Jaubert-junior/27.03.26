@@ -1,0 +1,5 @@
+from flask import Flask
+from controller import indexController
+
+def adicionarRotas(app:Flask):
+    app.add_url_rule(rule='/', endpoint='home',view_func= indexController.home, methods=['GET'])
